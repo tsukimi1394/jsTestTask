@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Document</title>
+
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="form-wrapper">
+			<h2 class="form-title">Form</h2>
+			<form class="form" action="" method="post">
+				<div class="input-block">
+		      <label for="firstName" class="input-label">First Name*:</label>
+		      <input id="firstName" type="text" class="input input-text" required>
+		      <div class="firstNameError error"></div>
+
+		      <label for="lastName" class="input-label">Last Name*:</label>
+		      <input id="lastName" type="text" class="input input-text" required>
+		      <div class="lastNameError error"></div>
+		    </div>
+
+		    <div class="input-block">
+		    	<label for="bday">Birthday*:</label>
+		    	<input type="date" id="bday" class="input" required>
+		    	<div class="bdayError error"></div>
+				</div>
+
+				<div class="input-block">
+		    	<label for="sex">Sex*:</label>
+		    	<label class="container">Male
+					  <input type="radio" name="sex" value="male" required>
+					  <span class="radio"></span>
+					</label>
+					<label class="container">Female
+					  <input type="radio" name="sex" value="female">
+					  <span class="radio"></span>
+					</label>
+					<div class="sexError error"></div>
+		    </div>
+
+		    <div class="input-block">
+		    	<label for="country">Country*:</label>
+		    	<select id="country" class="select input" required>
+		    		<option value="" selected disabled>Select Country...</option>
+		    		<option value="Ukraine">Ukraine</option>
+		    		<option value="Germany">Germany</option>
+		    	</select>
+		    	<div class="countryError error"></div>
+		    </div>
+
+		    <div class="input-block">
+		    	<label for="email">Email*:</label>
+		    	<input type="email" id="email" class="input input-text" required>
+		    	<div class="emailError error"></div>
+		    </div>
+
+		    <div class="input-block">
+		    	<label for="password">Password*:</label>
+		    	<div class="tooltip">
+		    		<input type="password" id="password" class="input input-text" required>
+		    		<div class="tooltip-text">Password should be: <br>1. Between 6 and 32 characters. <br>2. At least on lowercase letter. <br>3. At least one capital letter. <br>4. At least one number.</div>
+		    	</div>
+		    	<div class="passwordError error"></div>
+		    </div>
+
+		    <div class="input-block">
+		    	<label for="address">Address*:</label>
+		    	<input type="text" id="address" class="input input-text" required>
+		    	<div class="addressError error"></div>
+		    </div>
+
+		    <div class="input-block">
+		    	<label for="notes">Notes:</label>
+		    	<textarea rows="4" cols="50" id="notes">...Notes</textarea>
+		    	<div class="notesError error"></div>
+		    </div>
+
+		    <div class="note">
+		    	* -  fields
+		    </div>
+
+	      <button type="submit" class="btn btn-submit">Submit</button>
+	  	</form>
+	  </div>
+
+	  <div id="modalPass" class="modal">
+		  <div class="modal-content">
+		    <span>Validation passed!</span>
+		    <span class="close">&times;</span>
+		  </div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
